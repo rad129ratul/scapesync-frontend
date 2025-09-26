@@ -73,7 +73,7 @@ const ResetPasswordForm = () => {
               Enter your new password.
             </h2>
             <p className="text-gray-600">
-              Please enter the email address associated with your account, and we'll email you a link to reset your password.
+              Please enter the email address associated with your account, and we will email you a link to reset your password.
             </p>
           </div>
 
