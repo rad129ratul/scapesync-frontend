@@ -28,15 +28,18 @@ const BuildForEveryone = () => {
           <h2 className={`heading-section text-gray-900 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             Build for Everyone
           </h2>
-          <p className={`text-body max-w-3xl mx-auto transition-all duration-1000 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            Whether you're a landscaping professional, service provider, or customer looking for quality landscaping services, our platform supports everyone in the landscaping community.
-          </p>
+          <div className={`order-1 lg:order-2 flex justify-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+            <img 
+              src="/images/Frame 2147227474.png" 
+              alt="Book Services Interface" 
+              className="w-full max-w-[280px] lg:max-w-[320px] h-auto"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className={`order-2 lg:order-1 space-y-8 transition-all duration-1000 delay-400 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div>
-              <span className="section-tag">PROS</span>
               <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
                 Book services, track progress and stay updated
               </h3>
@@ -73,15 +76,7 @@ const BuildForEveryone = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className={`order-1 lg:order-2 flex justify-center transition-all duration-1000 delay-600 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-            <img 
-              src="/images/Frame 2147227474.png" 
-              alt="Book Services Interface" 
-              className="w-full max-w-[280px] lg:max-w-[320px] h-auto"
-            />
-          </div>
+          </div>          
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mt-20">

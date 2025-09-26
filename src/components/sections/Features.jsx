@@ -31,7 +31,7 @@ const Features = () => {
         </div>
       ),
       title: "Easy Service Booking",
-      description: "Book landscaping services with just a few taps. Browse available services, check pricing, and schedule appointments instantly."
+      description: "Streamlined booking process for clients with service catalogs and availability."
     },
     {
       icon: (
@@ -42,7 +42,7 @@ const Features = () => {
         </div>
       ),
       title: "Real Time Tracking",
-      description: "Track your service requests in real-time. Get updates on job progress, estimated completion times, and technician location."
+      description: "Monitor job progress, employee hours, and project timelines with live updates."
     },
     {
       icon: (
@@ -53,7 +53,7 @@ const Features = () => {
         </div>
       ),
       title: "Performance Analytics",
-      description: "Monitor your landscaping performance with detailed analytics. Track job completion rates, customer satisfaction, and revenue metrics."
+      description: "Comprehensive reporting and insights to improve business operations and efficiency."
     },
     {
       icon: (
@@ -80,11 +80,11 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="features-grid">
+        <div className="features-grid grid grid-cols-2 gap-8">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="feature-item"
+              className="feature-item flex flex-col items-center text-center p-6"
             >
               <div className="feature-icon-wrapper">
                 {feature.icon}
@@ -99,15 +99,6 @@ const Features = () => {
               </p>
             </div>
           ))}
-        </div>
-
-        <div className="features-footer">
-          <div className="trust-badge">
-            <svg width="25" height="25" className="trust-icon" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-            </svg>
-            <span>Trusted by 10,000+ landscaping professionals</span>
-          </div>
         </div>
       </div>
     </section>
