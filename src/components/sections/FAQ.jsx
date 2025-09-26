@@ -46,7 +46,7 @@ const FAQ = () => {
   }
 
   return (
-    <section ref={sectionRef} className="py-20 bg-white">
+    <section ref={sectionRef} className="section-spacing bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -61,20 +61,20 @@ const FAQ = () => {
           {faqs.map((faq, index) => (
             <div 
               key={index}
-              className={`border border-gray-200 rounded-2xl overflow-hidden hover:border-green-200 transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+              className={`faq-item transition-all duration-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 focus:outline-none focus:bg-gray-50 transition-colors duration-200"
+                className="faq-button"
               >
                 <h3 className="text-lg md:text-xl font-semibold text-gray-900 pr-4">
                   {faq.question}
                 </h3>
                 
-                <div className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full bg-green-100 transition-all duration-300 ${openIndex === index ? 'rotate-180 bg-green-500' : ''}`}>
-                  <svg 
-                    className={`w-5 h-5 transition-colors duration-300 ${openIndex === index ? 'text-white' : 'text-green-500'}`} 
+                <div className={`flex-shrink-0 w-8 h-8 flex items-center justify-center rounded-full transition-all duration-300 ${openIndex === index ? 'bg-green-500 rotate-180' : 'bg-gray-100'}`}>
+                  <svg width="25" height="25"
+                    className={` transition-colors duration-300 ${openIndex === index ? 'text-white' : 'text-green-500'}`} 
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -111,7 +111,7 @@ const FAQ = () => {
                 href="mailto:support@scapesync.com"
                 className="inline-flex items-center justify-center px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-medium rounded-lg transition-colors duration-200"
               >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="25" height="25" className="mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
                 Email Support
@@ -120,7 +120,7 @@ const FAQ = () => {
                 href="#contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-50 text-gray-700 font-medium border border-gray-300 rounded-lg transition-colors duration-200"
               >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg width="25" height="25" className="mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
                 Live Chat

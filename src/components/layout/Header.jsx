@@ -16,18 +16,18 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+    <header style={{backgroundColor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(8px)', boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)', borderBottom: '1px solid rgba(229,231,235,1)'}}>
+      <div className="container-custom">
+        <div className="flex justify-between items-center" style={{height: '80px'}}>
           {/* Logo */}
           <div className="flex items-center">
             <a href="/" className="flex items-center">
               <img 
                 src="/images/Vector-1.png" 
                 alt="ScapeSync" 
-                className="h-8 w-auto"
+                className="w-auto" style={{height: '40px'}}
               />
-              <span className="ml-2 text-xl font-semibold text-gray-900">
+              <span className="text-gray-900" style={{marginLeft: '12px', fontSize: '24px', fontWeight: '700'}}>
                 ScapeSync
               </span>
             </a>
@@ -35,16 +35,16 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="#features" className="transition-colors" style={{color: '#374151', fontWeight: '500'}} onMouseEnter={(e) => e.target.style.color='#059669'} onMouseLeave={(e) => e.target.style.color='#374151'}>
               Features
             </a>
-            <a href="#testimonials" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="#testimonials" className="transition-colors" style={{color: '#374151', fontWeight: '500'}} onMouseEnter={(e) => e.target.style.color='#059669'} onMouseLeave={(e) => e.target.style.color='#374151'}>
               Testimonials
             </a>
-            <a href="#faq" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="#faq" className="transition-colors" style={{color: '#374151', fontWeight: '500'}} onMouseEnter={(e) => e.target.style.color='#059669'} onMouseLeave={(e) => e.target.style.color='#374151'}>
               FAQ
             </a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <a href="#contact" className="transition-colors" style={{color: '#374151', fontWeight: '500'}} onMouseEnter={(e) => e.target.style.color='#059669'} onMouseLeave={(e) => e.target.style.color='#374151'}>
               Contact
             </a>
           </nav>
@@ -89,12 +89,7 @@ const Header = () => {
               onClick={() => dispatch(toggleMobileMenu())}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
             >
-              <svg 
-                className="h-6 w-6" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
+              <svg width="25" height="25" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
                 {showMobileMenu ? (
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 ) : (
